@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- xmlns:th="http://www.w3.org/1999/xhtml"> -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        h1, .top{
+            text-align: center;
+        }
+        .err{
+            color: red;
+            text-align: center;
+        }
+        .row.appointment-head{
+            margin-top: 10px;
+            background-color: grey;
+        }
+        /*.new-btn, .search-form{
+            display: inline-block;
+        }*/
+        .add-form{
+            display: none;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<button type="button" id ="appointment">List Appointments</button>
+<form method="GET" action="#" class="search-form">
+    <input type="text" id="txtSearch">
+    <input type="button" value="Search" id="btnSearch">
+</form>
+<!-- consume REST service using JQuery -->
+<div class="container appointment-area" style="display: none;" id="hidden">
+    <div class="col-sm-4">
+        Date
+    </div>
+    <div class="col-sm-4">
+        Time
+    </div>
+    <div class="col-sm-4">
+        Description
+    </div>
+    <div class="row appointment-contents" id="appointmentsList"></div>
+</div>
+</div>
+
+</body>
+</html>

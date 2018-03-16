@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Appointment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="err"></div>
+<div class="left">
+    <button type="button" class="btn btn-primary" id="new-btn">NEW</button>
+    <form method="POST" action="/createAppointment" class="add-form" id="appointment" name="appointment">
+        <button type="submit" class="btn btn-primary" id="btn-add">ADD</button>
+        <button type="button" class="btn btn-danger" id="cncl-btn">CANCEL</button>
+        <br><br>
+            <p><label>DATE</label>      <input type="text" id="date" name="date" required="required"></p>
+            <p><label>TIME</label>      <input type="time" id="time" name="time" required="required"></p>
+            <p><label>DESC</label>      <input type="text" id="desc" name="description" required="required"></p>
+    </form>
+    <br><br>
+    <form method="GET" action="#" class="search-form">
+        <input type="text" id="txtSearch">
+        <button type="button" value="Search" id="btnSearch">Search</button>
+    </form>
+</div>
+<div class="table-responsive">
+    <table class="table" style="display: none;" id="hidden">
+       <thead >
+       <tr>
+            <th >
+                Date
+            </th>
+            <th>
+                Time
+            </th>
+            <th >
+                Description
+            </th>
+        </tr>
+       </thead>
+        <tbody  id="appointmentTable"></tbody>
+    </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

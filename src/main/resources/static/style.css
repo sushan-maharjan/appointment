@@ -1,0 +1,20 @@
+
+.err{
+    color: red;
+    text-align: center;
+}
+.row.appointment-head{
+    margin-top: 10px;
+    background-color: grey;
+}
+/*.new-btn, .search-form{
+    display: inline-block;
+}*/
+.add-form{
+    display: none;
+}
+
+.left{
+    margin-top: 50px;
+    margin: 40px;
+}
