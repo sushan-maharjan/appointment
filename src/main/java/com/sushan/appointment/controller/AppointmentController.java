@@ -26,7 +26,7 @@ public class AppointmentController {
 
     @GetMapping("/appointment")
     public List<Appointment> getAppointments(String str){
-        if(str!=(null) && str.length()>0){
+        if(str!=(null) && str.trim().length()>0){
            return appointmentService.searchByDescription(str);
         }
         return appointmentService.findAll();

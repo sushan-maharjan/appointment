@@ -16,8 +16,8 @@ public class AppointmentService {
     @Autowired
     AppointmentRepository appointmentRepository;
 
-    public void save(Appointment appointment){
-        appointmentRepository.save(appointment);
+    public Appointment save(Appointment appointment){
+       return appointmentRepository.save(appointment);
     }
 
     public void update(Integer id, Appointment appointment){

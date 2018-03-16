@@ -19,11 +19,29 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-   // @NotNull
-    Date date;
+
+    @NotNull
+    String date;
     String time;
-  //  @NotBlank
+
+    @NotBlank
     String description;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public Integer getId() {
         return id;
@@ -32,14 +50,6 @@ public class Appointment {
     public void setId(Integer id) {
         this.id = id;
     }
-
-/*    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }*/
 
     public String getDescription() {
         return description;

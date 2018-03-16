@@ -53,12 +53,7 @@ $(document).ready(function(){
         var now = new Date();
         now.setHours(0,0,0,0);
         var current_time = new Date().toString().substr(16,5);
-        var checkDate = /^((19|20)\d{2})\-(0[1-9]|1[0-2])\-(0[1-9]|1\d|2\d|3[01])$/
-            .test(date);
-        if(!checkDate){
-            $('.err').text("Please enter date in mm/dd/yyyy format");
-            return false;
-        }
+
         if(input_date<now) {
             $('.err').text("Cannot pick past date!");
             return false;
@@ -68,9 +63,6 @@ $(document).ready(function(){
             $('.err').text("Cannot set past time!");
             return false;
         }
-
-        $(".container.appointment-area").append('<div class="row"><div class="col-sm-4">'+date+'</div><div class="col-sm-4">'
-            +time+'</div><div class="col-sm-4">'+desc+'</div></div>');
     });
 });
 

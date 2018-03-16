@@ -30,8 +30,10 @@ public class HomeController {
 
 
     @PostMapping("/createAppointment")
-    public String createAppointment(Appointment appointment){
-        appointmentService.save(appointment);
+    public String createAppointment(Model model, Appointment appointment){
+        if(appointmentService.save(appointment)!=null){
+            model.addAttribute("message", "Successfully added appointment!");
+        }
         return "redirect:/";
     }
 
